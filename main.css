@@ -37,7 +37,7 @@ a {
     color: inherit; }
 
 a.category-link, a.page-link, a.home-link {
-  font-size: 1.4rem; }
+  font-size: 1.25rem; }
 
 img {
   display: block;
@@ -164,7 +164,7 @@ a[href^="#fnref:"] {
   font-size: 85%; }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 300; }
 
 a svg, .icon svg {
@@ -703,8 +703,7 @@ body.project {
     #sidebar a:hover.icon, #sidebar a:focus.icon {
       text-decoration: none; }
   #sidebar a.active {
-    font-weight: bold;
-	font-size: 1.4rem;}
+    font-weight: bold;}
 
 #sidebar .site-title {
   color: white; }
