@@ -37,7 +37,7 @@ a {
     color: inherit; }
 
 a.category-link, a.page-link, a.home-link {
-  font-size: 1.2rem; }
+  font-size: 1.4rem; }
 
 img {
   display: block;
@@ -175,6 +175,9 @@ a svg {
 
 .icon {
   vertical-align: middle; }
+  
+.fa{
+	vertical-align: middle;}
 
 .highlight .hll {
   background-color: #ffc; }
@@ -700,7 +703,8 @@ body.project {
     #sidebar a:hover.icon, #sidebar a:focus.icon {
       text-decoration: none; }
   #sidebar a.active {
-    font-weight: bold; }
+    font-weight: bold;
+	font-size: 1.4rem;}
 
 #sidebar .site-title {
   color: white; }
