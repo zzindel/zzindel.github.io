@@ -20,12 +20,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Add deploy_key
+        env: 
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY}}
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo "$DEPLOY_KEY" > "$HOME/deploy_key"
+          chmod 600 "$HOME/deploy_key"
+      - name: rsync files
+       run: |
+       rsync -avhz -e "ssh -o StrictHostKeyChecking=no -i $HOME/deploy_key" -- exclude-from '.exclude-list.txt'  . 
+   
